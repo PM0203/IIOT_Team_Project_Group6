@@ -10,24 +10,25 @@ Repository: https://github.com/PM0203/IIOT_Team_Project_Group6
 
 ⭐ Status
 
-
 ⸻
 
 📌 Overview
 
 This project demonstrates a complete IIoT ecosystem for humidity monitoring and automated control. Built using Raspberry Pi, MQTT, PostgreSQL, Python, and Streamlit, the system provides:
-	•	Real-time sensor monitoring
-	•	Edge computing
-	•	Cloud-ready communication
-	•	Historical logging
-	•	Control of actuators
-	•	Predictive analytics
+-	Real-time sensor monitoring
+-	Edge computing
+-	Cloud-ready communication
+-	Historical logging
+-	Control of actuators
+-	Predictive analytics
 
 This solution can be applied to labs, storage rooms, food processing, pharma, or any environment requiring controlled humidity.
 
 ⸻
 
 🔧 System Architecture
+
+⸻
 
 Sensors → Raspberry Pi → MQTT → Logging → PostgreSQL → Streamlit → Control Server
 
@@ -48,12 +49,15 @@ Key Components
 
 📂 Data Flow Pipeline
 
+⸻
 
 <img width="735" height="394" alt="image" src="https://github.com/user-attachments/assets/b6f83316-f70c-4e19-98c6-2183d5bcec8d" />
 
 ⸻
 
 🚀 Features
+
+⸻
 
 ✔ Edge sensing (SenseHAT + EasyLog)
 
@@ -94,47 +98,58 @@ Clone the files in the folder: Raspi_Codes
 
 🥉 Setup the Laptop/Server
 
+⸻
+
 Install Python dependencies:
 
 pip install -r requirements.txt
 
 Install PostgreSQL:
 
-brew install postgresql
-brew services start postgresql
+pip install postgresql
+pip services start postgresql
 
 Environment Variables:
 
 export PGHOST=localhost
 export PGPORT=5432
-export PGDATABASE=IIOT
+export PGDATABASE=postgress
 export PGUSER=postgres
 export PGPASSWORD=admin
 
 Create Tables:
 
-CREATE TABLE sensor (
-  device_id TEXT,
-  temperature FLOAT,
-  humidity FLOAT,
-  timestamp TIMESTAMP,
-  PRIMARY KEY (device_id, timestamp)
+CREATE TABLE "RAW DATA" (
+    id SERIAL PRIMARY KEY,
+    received_at TIMESTAMP,
+    local_time TIMESTAMP,
+    topic TEXT,
+    qos INTEGER,
+    retain BOOLEAN,
+    payload TEXT
+);
+
+CREATE TABLE sensor_data (
+    id SERIAL PRIMARY KEY,
+    device_id TEXT NOT NULL,
+    event_ts TIMESTAMP NOT NULL,
+    temperature DOUBLE PRECISION,
+    humidity DOUBLE PRECISION,
+    source_file TEXT,          -- name of the log file the record came from
+    source_line_no INTEGER     -- line number inside the log file
 );
 
 ⸻
 
 🖥 Start the System
 
+⸻
+
 On Raspberry Pi:
 
 python3 publisher.py
 python3 easylog.py
 python3 toggle_server.py
-
-On Laptop/Server:
-
-python3 server_datalog.py
-python3 insert.py
 
 Start Streamlit Dashboard:
 
@@ -144,6 +159,8 @@ streamlit run streamlit_app/dashboard.py
 ⸻
 
 🧪 Testing Guide
+
+⸻
 
 1. Change humidity physically
 
@@ -159,13 +176,13 @@ logs/YYYY-MM-DD/log_file.json
 
 4. Check database:
 
-SELECT * FROM sensor1 ORDER BY timestamp DESC;
+SELECT * FROM "RAW DATA" ORDER BY timestamp DESC;
 
 5. Test control from dashboard
 
 Streamlit triggers URLs like:
 
-http://<pi-ip>:8000?action=fan_on
+http://<pi-ip>:8000/status
 
 Pi executes actuator control accordingly.
 
