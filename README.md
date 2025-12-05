@@ -77,29 +77,22 @@ Key Components
 
 ⸻
 
-🥇 1. Setup Raspberry Pi
+🥇 Setup Raspberry Pi
 
 sudo apt update
 sudo apt install python3-pip
-pip3 install paho-mqtt requests bs4 sense_hat
+sudo pip3 install paho-mqtt
+sudo apt install chromium-browser
 
-Clone the repo:
-
-git clone https://github.com/PM0203/IIOT_Team_Project_Group6.git
-cd IIOT_Team_Project_Group6
-
-
-⸻
-
-🥈 2. Install MQTT Broker
-
-sudo apt install mosquitto mosquitto-clients
-sudo systemctl enable mosquitto
-
+Clone the files in the folder: Raspi_Codes
+- easylog_mqtt_pooler.py (This logs data from Easy Logg Sensor Through Webscraping stategy)
+- publisher.py (This gets data from sense_hat_
+- toggle_server.py (Acts as server and recieves communication through HTTP)
+- toggle_usb.py (This is responsible for Turing The UCB Hub off)
 
 ⸻
 
-🥉 3. Setup the Laptop/Server
+🥉 Setup the Laptop/Server
 
 Install Python dependencies:
 
@@ -120,22 +113,13 @@ export PGPASSWORD=admin
 
 Create Tables:
 
-CREATE TABLE sensor1 (
+CREATE TABLE sensor (
   device_id TEXT,
   temperature FLOAT,
   humidity FLOAT,
   timestamp TIMESTAMP,
   PRIMARY KEY (device_id, timestamp)
 );
-
-CREATE TABLE sensor2 (
-  device_id TEXT,
-  temperature FLOAT,
-  humidity FLOAT,
-  timestamp TIMESTAMP,
-  PRIMARY KEY (device_id, timestamp)
-);
-
 
 ⸻
 
