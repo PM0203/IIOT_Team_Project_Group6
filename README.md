@@ -44,14 +44,12 @@ Key Components
 	•	Dashboard: Streamlit (real-time data + controls)
 
 
-<img width="735" height="394" alt="image" src="https://github.com/user-attachments/assets/b6f83316-f70c-4e19-98c6-2183d5bcec8d" />
-
 ⸻
 
-📂 Project Structure
+📂 Data Flow Pipeline
 
 
-
+<img width="735" height="394" alt="image" src="https://github.com/user-attachments/assets/b6f83316-f70c-4e19-98c6-2183d5bcec8d" />
 
 ⸻
 
