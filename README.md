@@ -172,6 +172,8 @@ Pi executes actuator control accordingly.
 
 ⚠️ Challenges & Solutions
 
+⸻
+
 • EasyLog compatibility issue
 
 → Solved using Python web scraping.
