@@ -43,28 +43,14 @@ Key Components
 	•	Database: PostgreSQL
 	•	Dashboard: Streamlit (real-time data + controls)
 
+
+<img width="735" height="394" alt="image" src="https://github.com/user-attachments/assets/b6f83316-f70c-4e19-98c6-2183d5bcec8d" />
+
 ⸻
 
 📂 Project Structure
 
-IIOT_Team_Project_Group6
-│
-├── publisher.py
-├── easylog.py
-├── toggle_server.py
-│
-├── server_datalog.py
-├── insert.py
-│
-├── streamlit_app/
-│   └── dashboard.py
-│
-├── logs/
-│   └── YYYY-MM-DD/log_file.json
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
+
 
 
 ⸻
