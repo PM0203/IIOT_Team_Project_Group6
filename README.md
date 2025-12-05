@@ -160,6 +160,8 @@ logs/YYYY-MM-DD/log_file.json
 
 SELECT * FROM "RAW DATA" ORDER BY timestamp DESC;
 
+migration.py is responsible for moving parsed records from the "RAW DATA" table into the sensor_data table, converting raw MQTT payloads into structured, clean database entries used by the dashboard.
+
 5. Test control from dashboard
 
 Streamlit triggers URLs like:
