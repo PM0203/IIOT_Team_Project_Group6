@@ -32,24 +32,6 @@ This solution can be applied to labs, storage rooms, food processing, pharma, or
 
 Sensors → Raspberry Pi → MQTT → Logging → PostgreSQL → Streamlit → Control Server
 
-Key Components
-	•	Raspberry Pi 4 running:
-	•	publisher.py
-	•	easylog.py
-	•	toggle_server.py
-	•	MQTT Broker: Mosquitto
-	•	Laptop/Server:
-	•	server_datalog.py
-	•	insert.py
-	•	Database: PostgreSQL
-	•	Dashboard: Streamlit (real-time data + controls)
-
-
-⸻
-
-📂 Data Flow Pipeline
-
-⸻
 
 <img width="735" height="394" alt="image" src="https://github.com/user-attachments/assets/b6f83316-f70c-4e19-98c6-2183d5bcec8d" />
 
@@ -209,19 +191,24 @@ Pi executes actuator control accordingly.
 ⸻
 
 🔮 Future Extensions
-	•	Multi-room, multi-sensor scalability
-	•	OPC-UA integration
-	•	AI-based auto-control
-	•	Cloud deployment
-	•	SMS/email alerts
-	•	Compliance-ready audit logging
+
+⸻
+
+-	Multi-room, multi-sensor scalability
+-	OPC-UA integration
+-	AI-based auto-control
+-	Cloud deployment
+-	SMS/email alerts
+-	Compliance-ready audit logging
 
 ⸻
 
 👥 Authors (Group 6)
-	•	Hsin Cheng
-	•	Pankaj Mishra
-	•	Pratyodhaya Padalinathan
+
+⸻
+-	Hsin Cheng
+-	Pankaj Mishra
+-	Pratyodhaya Padalinathan
 
 
 🎉 Summary
