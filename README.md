@@ -84,20 +84,20 @@ Clone the files in the folder: Raspi_Codes
 
 Install Python dependencies:
 
-pip install -r requirements.txt
+-    pip install -r requirements.txt
 
 Install PostgreSQL:
 
-pip install postgresql
-pip services start postgresql
+-    pip install postgresql
+-    pip services start postgresql
 
 Environment Variables:
 
-export PGHOST=localhost
-export PGPORT=5432
-export PGDATABASE=postgress
-export PGUSER=postgres
-export PGPASSWORD=admin
+-    export PGHOST=localhost
+-    export PGPORT=5432
+-    export PGDATABASE=postgress
+-    export PGUSER=postgres
+-    export PGPASSWORD=admin
 
 Create Tables:
 
