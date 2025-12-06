@@ -78,9 +78,9 @@ sudo apt install chromium-browser
 
 Clone the files in the folder: Raspi_Codes
 - easylog_mqtt_pooler.py (This logs data from Easy Logg Sensor Through Webscraping stategy)
-- publisher.py (This gets data from sense_hat_
+- publisher.py (This gets data from sense_hat)
 - toggle_server.py (Acts as server and recieves communication through HTTP)
-- toggle_usb.py (This is responsible for Turing The UCB Hub off)
+- toggle_usb.py (This is connected through the server to control the UCB Hub)
 
 ⸻
 
@@ -136,7 +136,7 @@ CREATE TABLE sensor_data (
 On Raspberry Pi:
 
 - python3 publisher.py
-- python3 easylog.py
+- python3 easylog_mqtt_pooler.py
 - python3 toggle_server.py
 
 Start Streamlit Dashboard:
