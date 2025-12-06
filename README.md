@@ -141,7 +141,7 @@ python3 toggle_server.py
 
 Start Streamlit Dashboard:
 
-streamlit run main_streamlit_app.py
+streamlit run main_streamlit.py
 
 
 ⸻
