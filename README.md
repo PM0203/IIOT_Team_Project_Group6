@@ -148,27 +148,21 @@ streamlit run streamlit_app/dashboard.py
 
 Sensor values update within seconds.
 
-2. Check MQTT:
-
-mosquitto_sub -t "iiot/#"
-
-3. Check logs:
+2. Check logs:
 
 logs/YYYY-MM-DD/log_file.json
 
-4. Check database:
+3. Check database:
 
 SELECT * FROM "RAW DATA" ORDER BY timestamp DESC;
 
 migration.py is responsible for moving parsed records from the "RAW DATA" table into the sensor_data table, converting raw MQTT payloads into structured, clean database entries used by the dashboard.
 
-5. Test control from dashboard
+4. Test control from dashboard
 
 Streamlit triggers URLs like:
 
 http://<pi-ip>:8000/status
-
-Pi executes actuator control accordingly.
 
 ⸻
 
