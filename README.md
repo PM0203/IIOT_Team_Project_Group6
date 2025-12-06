@@ -6,7 +6,7 @@ Group 6 – MFG 598 | Arizona State University
 
 Repository: https://github.com/PM0203/IIOT_Team_Project_Group6
 
-An IIoT-based Smart Humidity Control System (IIoT Group 6.pptx - for Full details)
+An IIoT-based Smart Humidity Control System (IIoT Group6 project.pptx - for Full details)
 
 This project demonstrates a fully integrated smart humidity control system that automates environmental monitoring and regulation using a complete IIoT architecture. The system uses two humidity/temperature sensors connected to a Raspberry Pi, which reads data, applies control logic, and communicates through the lightweight MQTT protocol. Data flows from the physical device layer to an edge-computing layer, then to a cloud platform consisting of Ignition and PostgreSQL, where real-time values, historical logs, and analytics are generated. A Streamlit-based dashboard visualizes live readings, actuator status, alerts, and trend analytics while also enabling remote manual control of the fan.
 
