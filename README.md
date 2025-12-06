@@ -135,9 +135,9 @@ CREATE TABLE sensor_data (
 
 On Raspberry Pi:
 
-python3 publisher.py
-python3 easylog.py
-python3 toggle_server.py
+- python3 publisher.py
+- python3 easylog.py
+- python3 toggle_server.py
 
 Start Streamlit Dashboard:
 
