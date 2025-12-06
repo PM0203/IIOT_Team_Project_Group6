@@ -6,9 +6,9 @@ Group 6 – MFG 598 | Arizona State University
 
 Repository: https://github.com/PM0203/IIOT_Team_Project_Group6
 
-IIoT Group 6.pptx - breif.
+An IIoT-based Smart Humidity Control System (IIoT Group 6.pptx - for Full details)
 
-The IIoT Group 6 project demonstrates a fully integrated smart humidity control system that automates environmental monitoring and regulation using a complete IIoT architecture. The system uses two humidity/temperature sensors connected to a Raspberry Pi, which reads data, applies control logic, and communicates through the lightweight MQTT protocol. Data flows from the physical device layer to an edge-computing layer, then to a cloud platform consisting of Ignition and PostgreSQL, where real-time values, historical logs, and analytics are generated. A Streamlit-based dashboard visualizes live readings, actuator status, alerts, and trend analytics while also enabling remote manual control of the fan.
+This project demonstrates a fully integrated smart humidity control system that automates environmental monitoring and regulation using a complete IIoT architecture. The system uses two humidity/temperature sensors connected to a Raspberry Pi, which reads data, applies control logic, and communicates through the lightweight MQTT protocol. Data flows from the physical device layer to an edge-computing layer, then to a cloud platform consisting of Ignition and PostgreSQL, where real-time values, historical logs, and analytics are generated. A Streamlit-based dashboard visualizes live readings, actuator status, alerts, and trend analytics while also enabling remote manual control of the fan.
 
 The project successfully demonstrates end-to-end IIoT functionality including sensing, communication, storage, visualization, and automated actuation while addressing real industrial needs such as stability, energy efficiency, and remote supervision. Despite challenges like sensor compatibility and USB hub control, the team built a robust data pipeline and control framework. Future extensions include scaling to multi-room environments, integrating predictive/AI-based control, adding OPC UA for industrial interoperability, and deploying cloud dashboards with automated alert systems.
 
