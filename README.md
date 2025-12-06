@@ -75,6 +75,7 @@ sudo apt update
 sudo apt install python3-pip
 sudo pip3 install paho-mqtt
 sudo apt install chromium-browser
+sudo apt install chromium-chromedriver
 
 Clone the files in the folder: Raspi_Codes
 - easylog_mqtt_pooler.py (This logs data from Easy Logg Sensor Through Webscraping stategy)
